@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D29DFC92-25B4-48A0-9F0A-F47C337A1E84}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\dell\\source\\repos\\blazorapp1\\blazorapp1\\components\\pages\\hospital.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D29DFC92-25B4-48A0-9F0A-F47C337A1E84}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\hospital.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D29DFC92-25B4-48A0-9F0A-F47C337A1E84}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\dell\\source\\repos\\blazorapp1\\blazorapp1\\components\\pages\\hospitalmanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D29DFC92-25B4-48A0-9F0A-F47C337A1E84}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\hospitalmanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D29DFC92-25B4-48A0-9F0A-F47C337A1E84}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\dell\\source\\repos\\blazorapp1\\blazorapp1\\data\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D29DFC92-25B4-48A0-9F0A-F47C337A1E84}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\data\\hospital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D29DFC92-25B4-48A0-9F0A-F47C337A1E84}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\dell\\source\\repos\\blazorapp1\\blazorapp1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D29DFC92-25B4-48A0-9F0A-F47C337A1E84}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HospitalManagement.razor",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\BlazorApp1\\Components\\Pages\\HospitalManagement.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\HospitalManagement.razor",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\BlazorApp1\\Components\\Pages\\HospitalManagement.razor*",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\HospitalManagement.razor*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-31T14:01:06.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\BlazorApp1\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\BlazorApp1\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "BlazorApp1\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T13:53:13.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Hospital.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\BlazorApp1\\Data\\Hospital.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Data\\Hospital.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\BlazorApp1\\Data\\Hospital.cs*",
+              "RelativeToolTip": "BlazorApp1\\Data\\Hospital.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T13:52:40.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Hospital.razor",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Hospital.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Hospital.razor",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Hospital.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Hospital.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-31T13:52:38.092Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

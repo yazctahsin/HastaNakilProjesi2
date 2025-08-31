@@ -1,0 +1,138 @@
+﻿@page "/hospital-management"
+@inject BlazorApp1.Data.ApplicationDbContext DbContext
+@using BlazorApp1.Data
+@using Microsoft.EntityFrameworkCore
+<h3>Hastane Yönetimi</h3>
+
+@if (hospitals == null)
+{
+    <p>Yükleniyor...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Adres</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var hospital in hospitals)
+            {
+                <tr>
+                    <td>
+                        @if (editHospital?.Id == hospital.Id)
+                        {
+                            <input type="text" @bind="editHospital.Name" class="form-control" />
+                        }
+                        else
+                        {
+                            @hospital.Name
+                        }
+                    </td>
+                    <td>
+                        @if (editHospital?.Id == hospital.Id)
+                        {
+                            <input type="text" @bind="editHospital.Address" class="form-control" />
+                        }
+                        else
+                        {
+                            @hospital.Address
+                        }
+                    </td>
+                    <td>
+                        @if (editHospital?.Id == hospital.Id)
+                        {
+                            <button class="btn btn-success btn-sm" @onclick="() => SaveEditHospital()">Kaydet</button>
+                            <button class="btn btn-secondary btn-sm" @onclick="CancelEdit">İptal</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-warning btn-sm" @onclick="() => StartEditHospital(hospital)">Düzenle</button>
+                            <button class="btn btn-danger btn-sm" @onclick="() => DeleteHospital(hospital)">Sil</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <hr />
+
+    <h4>Yeni Hastane Ekle</h4>
+    <div class="mb-3">
+        <input type="text" placeholder="Hastane Adı" @bind="newHospital.Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <input type="text" placeholder="Adres" @bind="newHospital.Address" class="form-control" />
+    </div>
+    <button class="btn btn-primary" @onclick="AddHospital">Ekle</button>
+}
+
+@code {
+    private List<Hospital>? hospitals;
+    private Hospital newHospital = new();
+    private Hospital? editHospital;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadHospitals();
+    }
+
+    private async Task LoadHospitals()
+    {
+        hospitals = await DbContext.Hospitals.ToListAsync();
+    }
+
+    private async Task AddHospital()
+    {
+        if (!string.IsNullOrWhiteSpace(newHospital.Name))
+        {
+            DbContext.Hospitals.Add(newHospital);
+            await DbContext.SaveChangesAsync();
+            newHospital = new();
+            await LoadHospitals();
+        }
+    }
+
+    private void StartEditHospital(Hospital hospital)
+    {
+        // Edit için yeni bir kopya kullanıyoruz
+        editHospital = new Hospital
+        {
+            Id = hospital.Id,
+            Name = hospital.Name,
+            Address = hospital.Address
+        };
+    }
+
+    private async Task SaveEditHospital()
+    {
+        if (editHospital == null)
+            return;
+
+        var hospital = await DbContext.Hospitals.FindAsync(editHospital.Id);
+        if (hospital != null)
+        {
+            hospital.Name = editHospital.Name;
+            hospital.Address = editHospital.Address;
+            await DbContext.SaveChangesAsync();
+            editHospital = null;
+            await LoadHospitals();
+        }
+    }
+
+    private void CancelEdit()
+    {
+        editHospital = null;
+    }
+
+    private async Task DeleteHospital(Hospital hospital)
+    {
+        DbContext.Hospitals.Remove(hospital);
+        await DbContext.SaveChangesAsync();
+        await LoadHospitals();
+    }
+}

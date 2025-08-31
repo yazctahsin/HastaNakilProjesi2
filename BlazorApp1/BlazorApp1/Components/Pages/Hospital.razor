@@ -1,0 +1,34 @@
+﻿@page "/hospitals"
+@inject BlazorApp1.Data.ApplicationDbContext DbContext
+@using BlazorApp1.Data
+@using Microsoft.EntityFrameworkCore
+
+<h3>Hastaneler</h3>
+
+@if (hospitals == null)
+{
+    <p>Yükleniyor...</p>
+}
+else if (!hospitals.Any())
+{
+    <p>Hiç hastane bulunamadı.</p>
+}
+else
+{
+    <ul>
+        @foreach (var hospital in hospitals)
+        {
+            <li>@hospital.Name - @hospital.Address</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<BlazorApp1.Data.Hospital>? hospitals;
+
+    protected override async Task OnInitializedAsync()
+    {
+        hospitals = await DbContext.Hospitals.ToListAsync();
+    }
+}
+
